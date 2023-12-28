@@ -1,0 +1,15 @@
+/build
+/dist
+/node_modules
+/public
+/.husky
+/.next
+
+
+.vscode
+.git
+.DS_Store
+.czrc
+.gitignore
+.prettierignore
+.nvmrc
