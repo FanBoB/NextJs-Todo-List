@@ -36,7 +36,9 @@
 	"lint-staged": {
 		"**/src": "prettier --write --ignore-unknown",
 		"*/src/*.{ js, ts, tsx }": "eslint --cache --fix",
-		"*/src/*.{js,ts,tsx}": "prettier --write --ignore-unknown"
+		"*/src/*.{js,ts,tsx}": "prettier --write --ignore-unknown",
+		"*.js": "eslint --cache --fix",
+		"*.{js,css,md}": "prettier --write"
 	},
 	"config": {
 		"commitizen": {

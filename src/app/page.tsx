@@ -4,7 +4,6 @@ import db from "@/db";
 
 export default async function Home() {
 	const GetList = await db.todo.findMany();
-	console.log(GetList);
 	return (
 		<div className="container mx-auto px-52">
 			<HomeHeader />
