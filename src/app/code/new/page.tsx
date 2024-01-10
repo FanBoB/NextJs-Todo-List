@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import db from "@/db";
+import HomeHeader from "@/components/homeHeader";
 
 const NewDataPage = () => {
 	const createSnippet = async (formdata: FormData) => {
@@ -22,6 +23,7 @@ const NewDataPage = () => {
 
 	return (
 		<div className="container px-60 mx-auto">
+			<HomeHeader />
 			<div className="flex justify-between items-center mt-10">
 				<h1 className="font-bold text-4xl">New Data</h1>
 			</div>
