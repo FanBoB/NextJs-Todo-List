@@ -10,6 +10,8 @@ interface Props {
 	};
 }
 
+// export const dynamic = "force-dynamic";
+
 const PreviewPage = async (props: Props) => {
 	let id = Number(props.params.id);
 	await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -51,3 +53,14 @@ const PreviewPage = async (props: Props) => {
 	);
 };
 export default PreviewPage;
+
+//返回使用ID生成唯一的静态页面 在build生成 服务器组件可用
+export async function generateStaticParams() {
+	const ids = await db.todo.findMany();
+
+	return ids.map((item) => {
+		return {
+			id: item.id.toString()
+		};
+	});
+}
